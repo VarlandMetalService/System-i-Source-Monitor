@@ -69,6 +69,24 @@ $libraries[] = (object)array('name'								=>	'COPY.LIB\\QS36SRC',
 														 'filesToIgnore'			=>	array(),
 														 'extensionsToIgnore'	=>	array(),
 														 'patternsToIgnore'		=>	array());
+$libraries[] = (object)array('name'								=>	'PR.SLIB\\QS36SRC',
+														 'sourcePath'					=>	'\\\\qvarland3\\PRSLIB\\QS36SRC.FILE\\',
+														 'repoPath'						=>	'\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.SLIB\\QS36SRC\\',
+														 'filesToIgnore'			=>	array(),
+														 'extensionsToIgnore'	=>	array(),
+														 'patternsToIgnore'		=>	array());
+$libraries[] = (object)array('name'								=>	'PR.OLIB\\QS36SRC',
+														 'sourcePath'					=>	'\\\\qvarland3\\PROLIB\\QS36SRC.FILE\\',
+														 'repoPath'						=>	'\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.OLIB\\QS36SRC\\',
+														 'filesToIgnore'			=>	array(),
+														 'extensionsToIgnore'	=>	array(),
+														 'patternsToIgnore'		=>	array());
+$libraries[] = (object)array('name'								=>	'PR.OLIB\\QS36PRC',
+														 'sourcePath'					=>	'\\\\qvarland3\\PROLIB\\QS36PRC.FILE\\',
+														 'repoPath'						=>	'\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.OLIB\\QS36PRC\\',
+														 'filesToIgnore'			=>	array(),
+														 'extensionsToIgnore'	=>	array(),
+														 'patternsToIgnore'		=>	array());
 $globalPatternsToIgnore = array('/^.*##.MBR$/');
 $globalExtensionsToIgnore = array('PGM');
 $globalFilesToIgnore = array('.', '..');
