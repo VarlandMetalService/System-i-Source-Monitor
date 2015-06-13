@@ -16,11 +16,9 @@ To determine if a file has changed, the PHP function [`sha1_file`](http://php.ne
 
 There are three global option arrays used in this script: `$globalPatternsToIgnore`, `$globalExtensionsToIgnore`, and `$globalFilesToIgnore`.
 
-The `$globalPatternsToIgnore` is the most powerful of these options, because it could essentially perform the function of the other two arrays. The other arrays are maintained for simplicity. `$globalPatternsToIgnore` is an array of regular expressions. Each regular expression is tested against each file on the System i. If the file name matches the regular expression, the file is skipped. The regular expressions are evaluated using the PHP function [`preg_match`](http://php.net/manual/en/function.preg-match.php). A good example of the use of this array is the expression `/^.*##.MBR$/`. This regular expression basically prevents any file whose name ends with "##.MBR" from being copied to the repository. [PHP Live Regex](http://www.phpliveregex.com/) is a good resource for building regular expressions.
-
-`$globalExtensionsToIgnore` is an array of file extensions to skip. For example, compiled programs on the System i are named with a .PGM extension, so "PGM" is included in the array of file extensions to skip.
-
-Similar to `$globalExtensionsToIgnore`, `$globalFilesToIgnore` is an array of full filenames to skip.
+- The `$globalPatternsToIgnore` is the most powerful of these options, because it could essentially perform the function of the other two arrays. The other arrays are maintained for simplicity. `$globalPatternsToIgnore` is an array of regular expressions. Each regular expression is tested against each file on the System i. If the file name matches the regular expression, the file is skipped. The regular expressions are evaluated using the PHP function [`preg_match`](http://php.net/manual/en/function.preg-match.php). A good example of the use of this array is the expression `/^.*##.MBR$/`. This regular expression basically prevents any file whose name ends with "##.MBR" from being copied to the repository. [PHP Live Regex](http://www.phpliveregex.com/) is a good resource for building regular expressions.
+- `$globalExtensionsToIgnore` is an array of file extensions to skip. For example, compiled programs on the System i are named with a .PGM extension, so "PGM" is included in the array of file extensions to skip.
+- Similar to `$globalExtensionsToIgnore`, `$globalFilesToIgnore` is an array of full filenames to skip.
 
 #### Single Library Definition
 
