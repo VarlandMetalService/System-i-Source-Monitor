@@ -20,211 +20,245 @@
  * @var		string[]	$globalExtensionsToIgnore	Array of file extensions to ignore in every source library.
  * @var		string[]	$globalFilesToIgnore				Array of file names to ignore in every source library.
  */
-$libraries = array();														 
+$libraries = array();
 $libraries[] = (object)array('name'               => 'AP.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\APOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\AP.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'AP.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\APOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\AP.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'AP.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\APSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\AP.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'COPY.LIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\COPYLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\COPY.LIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => TRUE);
 $libraries[] = (object)array('name'               => 'FA.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\FAOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\FA.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'FA.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\FAOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\FA.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'FA.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\FASLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\FA.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'GL.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\GLOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\GL.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'GL.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\GLSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\GL.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'IN.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\INOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\IN.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'IN.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\INOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\IN.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'IN.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\INSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\IN.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'MN.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\MNOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\MN.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(,
+                             'disablePrompting'   => FALSE));
 $libraries[] = (object)array('name'               => 'MN.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\MNOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\MN.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'MN.OLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\MNOLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\MN.OLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'MN.SLIB\\QCLSRC',
                              'sourcePath'         => '\\\\qvarland3\\MNSLIB\\QCLSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\MN.SLIB\\QCLSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'MN.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\MNSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\MN.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OE.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\OEOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OE.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\OEOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OE.OLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\OEOLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.OLIB\\QS36SRC\\',
                              'filesToIgnore'      => array('SORT1.MBR', 'SORT2.MBR', 'VARRESP.MBR'),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OE.SLIB\\QCLSRC',
                              'sourcePath'         => '\\\\qvarland3\\OESLIB\\QCLSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.SLIB\\QCLSRC\\',
                              'filesToIgnore'      => array('ECOUTPUT.MBR', 'TBKUPO.MBR', 'TVOUTPUT.MBR'),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OE.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\OESLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OP.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\OPOLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OP.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OP.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\OPOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OP.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'OP.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\OPSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OP.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'PR.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\PROLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'PR.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\PROLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'PR.OLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\PROLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.OLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'PR.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\PRSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\PR.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'TR.OLIB\\DDSSRC',
                              'sourcePath'         => '\\\\qvarland3\\TROLIB\\DDSSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\TR.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'TR.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\TROLIB\\QS36PRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\TR.OLIB\\QS36PRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'TR.SLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\TRSLIB\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\TR.SLIB\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'VMSSCALL\\QCLSRC',
                              'sourcePath'         => '\\\\qvarland3\\VMSSCALL\\QCLSRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\VMSSCALL\\QCLSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());		
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => TRUE);
 $libraries[] = (object)array('name'               => 'VMSSCALL\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\VMSSCALL\\QS36SRC.FILE\\',
                              'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\VMSSCALL\\QS36SRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array());
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => TRUE);
 $globalPatternsToIgnore = array('/^.*##.MBR$/');
 $globalExtensionsToIgnore = array('PGM');
 $globalFilesToIgnore = array('.', '..');
@@ -242,9 +276,9 @@ function processLibrary($library, $prompt = TRUE) {
 
 	// Reference global arrays.
 	global $globalPatternsToIgnore, $globalExtensionsToIgnore, $globalFilesToIgnore;
-	
+
 	// Prompt user (if necessary).
-	if ($prompt) {
+	if ($prompt && !$library->disablePrompting) {
 		echo("\nEnter 'YES' to process {$library->name} >> ");
 		$response = stream_get_line(STDIN, 1024, PHP_EOL);
 		if ($response != 'YES') return;
@@ -252,7 +286,7 @@ function processLibrary($library, $prompt = TRUE) {
 
 	// Print message.
 	echo("\n{$library->name}\n" . str_repeat('-', strlen($library->name)) . "\n");
-	
+
 	// Check for files that need to be deleted from the repository because they no longer exist in the source.
 	echo("\n1. Delete Unnecessary Files from Repo\n\n");
 	$repoFiles = scandir($library->repoPath);
@@ -263,7 +297,7 @@ function processLibrary($library, $prompt = TRUE) {
 			unlink($library->repoPath . $file);
 		}
 	}
-	
+
 	// Copy files that don't exist in repo at all.
 	echo("\n2. Copy New & Changed Files to Repo\n\n");
 	$sourceFiles = scandir($library->sourcePath);
@@ -301,20 +335,20 @@ function main() {
 
 	// Reference global $libraries array.
 	global $libraries;
-	
+
 	// Print welcome message on screen.
 	echo("VCMS Source Code Monitor\n========================\n");
-	
+
 	// Prompt user to see if all libraries should be processed without prompting.
 	$promptEachLibrary = TRUE;
 	echo("\nEnter 'ALL' to process all libraries without further prompting >> ");
 	$response = stream_get_line(STDIN, 1024, PHP_EOL);
 	if ($response == 'ALL') $promptEachLibrary = FALSE;
-	
+
 	// Process each library.
 	foreach ($libraries as $lib) { processLibrary($lib, $promptEachLibrary); }
 	echo("\n");
-	
+
 }
 
 /** Execute main function. */
