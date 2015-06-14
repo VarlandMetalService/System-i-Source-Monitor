@@ -14,11 +14,11 @@
  */
 
 /**
- * @var		object[]	$libraries									Array of source libraries to monitor and their corresponding path in the
- *																							Git repo.
- * @var		string[]	$globalPatternsToIgnore		Array of file patterns to ignore in every source library.
- * @var		string[]	$globalExtensionsToIgnore	Array of file extensions to ignore in every source library.
- * @var		string[]	$globalFilesToIgnore				Array of file names to ignore in every source library.
+ * @var    object[]  $libraries                 Array of source libraries to monitor and their corresponding path in the
+ *                                              Git repo.
+ * @var    string[]  $globalPatternsToIgnore    Array of file patterns to ignore in every source library.
+ * @var    string[]  $globalExtensionsToIgnore  Array of file extensions to ignore in every source library.
+ * @var    string[]  $globalFilesToIgnore       Array of file names to ignore in every source library.
  */
 $libraries = array();
 $libraries[] = (object)array('name'               => 'AP.OLIB\\DDSSRC',
@@ -266,88 +266,88 @@ $globalFilesToIgnore = array('.', '..');
 /**
  * Processes given library object (single item from the global $libraries array.
  *
- * @param		object		$library		Library to process.
- * @param		boolean		$prompt			Whether or not to prompt the user to see if the user wants to process this library.
- *																Defaults to TRUE, which will prompt user. If FALSE, will not prompt user and will
- *																automatically process the library.
- * @return	void
+ * @param    object    $library   Library to process.
+ * @param    boolean   $prompt    Whether or not to prompt the user to see if the user wants to process this library.
+ *                                Defaults to TRUE, which will prompt user. If FALSE, will not prompt user and will
+ *                                automatically process the library.
+ * @return  void
  */
 function processLibrary($library, $prompt = TRUE) {
 
-	// Reference global arrays.
-	global $globalPatternsToIgnore, $globalExtensionsToIgnore, $globalFilesToIgnore;
+  // Reference global arrays.
+  global $globalPatternsToIgnore, $globalExtensionsToIgnore, $globalFilesToIgnore;
 
-	// Prompt user (if necessary).
-	if ($prompt && !$library->disablePrompting) {
-		echo("\nEnter 'YES' to process {$library->name} >> ");
-		$response = stream_get_line(STDIN, 1024, PHP_EOL);
-		if ($response != 'YES') return;
-	}
+  // Prompt user (if necessary).
+  if ($prompt && !$library->disablePrompting) {
+    echo("\nEnter 'YES' to process {$library->name} >> ");
+    $response = stream_get_line(STDIN, 1024, PHP_EOL);
+    if ($response != 'YES') return;
+  }
 
-	// Print message.
-	echo("\n{$library->name}\n" . str_repeat('-', strlen($library->name)) . "\n");
+  // Print message.
+  echo("\n{$library->name}\n" . str_repeat('-', strlen($library->name)) . "\n");
 
-	// Check for files that need to be deleted from the repository because they no longer exist in the source.
-	echo("\n1. Delete Unnecessary Files from Repo\n\n");
-	$repoFiles = scandir($library->repoPath);
-	foreach ($repoFiles as $file) {
-		if ($file == '.' || $file == '..') continue;
-		if (!file_exists($library->sourcePath . $file)) {
-			echo("   --> {$file}\n");
-			unlink($library->repoPath . $file);
-		}
-	}
+  // Check for files that need to be deleted from the repository because they no longer exist in the source.
+  echo("\n1. Delete Unnecessary Files from Repo\n\n");
+  $repoFiles = scandir($library->repoPath);
+  foreach ($repoFiles as $file) {
+    if ($file == '.' || $file == '..') continue;
+    if (!file_exists($library->sourcePath . $file)) {
+      echo("   --> {$file}\n");
+      unlink($library->repoPath . $file);
+    }
+  }
 
-	// Copy files that don't exist in repo at all.
-	echo("\n2. Copy New & Changed Files to Repo\n\n");
-	$sourceFiles = scandir($library->sourcePath);
-	foreach ($sourceFiles as $file) {
-		$filesToIgnore = array_unique(array_merge($globalFilesToIgnore, $library->filesToIgnore));
-		if (in_array($file, $filesToIgnore)) continue;
-		$extensionsToIgnore = array_unique(array_merge($globalExtensionsToIgnore, $library->extensionsToIgnore));
-		$ext = pathinfo($library->sourcePath . $file, PATHINFO_EXTENSION);
-		if (in_array($ext, $extensionsToIgnore)) continue;
-		$patternsToIgnore = array_unique(array_merge($globalPatternsToIgnore, $library->patternsToIgnore));
-		foreach ($patternsToIgnore as $pattern) {
-			if (preg_match($pattern, $file) == 1) continue 2;
-		}
-		if (!file_exists($library->repoPath . $file)) {
-			echo("   --> {$file} (New)\n");
-			copy($library->sourcePath . $file, $library->repoPath . $file);
-		} else {
-			$sha1Source = sha1_file($library->sourcePath . $file);
-			$sha1Repo = sha1_file($library->repoPath . $file);
-			if ($sha1Source != $sha1Repo) {
-				echo("   --> {$file} (Updated)\n");
-				copy($library->sourcePath . $file, $library->repoPath . $file);
-			}
-		}
-	}
+  // Copy files that don't exist in repo at all.
+  echo("\n2. Copy New & Changed Files to Repo\n\n");
+  $sourceFiles = scandir($library->sourcePath);
+  foreach ($sourceFiles as $file) {
+    $filesToIgnore = array_unique(array_merge($globalFilesToIgnore, $library->filesToIgnore));
+    if (in_array($file, $filesToIgnore)) continue;
+    $extensionsToIgnore = array_unique(array_merge($globalExtensionsToIgnore, $library->extensionsToIgnore));
+    $ext = pathinfo($library->sourcePath . $file, PATHINFO_EXTENSION);
+    if (in_array($ext, $extensionsToIgnore)) continue;
+    $patternsToIgnore = array_unique(array_merge($globalPatternsToIgnore, $library->patternsToIgnore));
+    foreach ($patternsToIgnore as $pattern) {
+      if (preg_match($pattern, $file) == 1) continue 2;
+    }
+    if (!file_exists($library->repoPath . $file)) {
+      echo("   --> {$file} (New)\n");
+      copy($library->sourcePath . $file, $library->repoPath . $file);
+    } else {
+      $sha1Source = sha1_file($library->sourcePath . $file);
+      $sha1Repo = sha1_file($library->repoPath . $file);
+      if ($sha1Source != $sha1Repo) {
+        echo("   --> {$file} (Updated)\n");
+        copy($library->sourcePath . $file, $library->repoPath . $file);
+      }
+    }
+  }
 
 }
 
 /**
  * Main program logic. Calls processLibrary function for each defined library.
  *
- * @return	void
+ * @return  void
  */
 function main() {
 
-	// Reference global $libraries array.
-	global $libraries;
+  // Reference global $libraries array.
+  global $libraries;
 
-	// Print welcome message on screen.
-	echo("VCMS Source Code Monitor\n========================\n");
+  // Print welcome message on screen.
+  echo("VCMS Source Code Monitor\n========================\n");
 
-	// Prompt user to see if all libraries should be processed without prompting.
-	$promptEachLibrary = TRUE;
-	echo("\nEnter 'ALL' to process all libraries without further prompting >> ");
-	$response = stream_get_line(STDIN, 1024, PHP_EOL);
-	if ($response == 'ALL') $promptEachLibrary = FALSE;
+  // Prompt user to see if all libraries should be processed without prompting.
+  $promptEachLibrary = TRUE;
+  echo("\nEnter 'ALL' to process all libraries without further prompting >> ");
+  $response = stream_get_line(STDIN, 1024, PHP_EOL);
+  if ($response == 'ALL') $promptEachLibrary = FALSE;
 
-	// Process each library.
-	foreach ($libraries as $lib) { processLibrary($lib, $promptEachLibrary); }
-	echo("\n");
+  // Process each library.
+  foreach ($libraries as $lib) { processLibrary($lib, $promptEachLibrary); }
+  echo("\n");
 
 }
 
