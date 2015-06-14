@@ -27,8 +27,10 @@ Each library is defined by a block of code like the following:
 ```php
 $libraries[] = (object)array('name'               => 'OE.OLIB\\QS36SRC',
                              'sourcePath'         => '\\\\qvarland3\\OEOLIB\\QS36SRC.FILE\\',
-                             'repoPath'           => '\\\\vmsfiles\\IT\\GitHub\\VCMS\\OE.OLIB\\QS36SRC\\',
-                             'filesToIgnore'      => array('SORT1.MBR', 'SORT2.MBR', 'VARRESP.MBR'),
+                             'repoPath'           => 'OE.OLIB\\QS36SRC\\',
+                             'filesToIgnore'      => array('SORT1.MBR',
+                                                           'SORT2.MBR',
+                                                           'VARRESP.MBR'),
                              'extensionsToIgnore' => array(),
                              'patternsToIgnore'   => array(),
                              'disablePrompting'   => FALSE);
