@@ -113,8 +113,8 @@ $libraries[] = (object)array('name'               => 'MN.OLIB\\DDSSRC',
                              'repoPath'           => 'MN.OLIB\\DDSSRC\\',
                              'filesToIgnore'      => array(),
                              'extensionsToIgnore' => array(),
-                             'patternsToIgnore'   => array(,
-                             'disablePrompting'   => FALSE));
+                             'patternsToIgnore'   => array(),
+                             'disablePrompting'   => FALSE);
 $libraries[] = (object)array('name'               => 'MN.OLIB\\QS36PRC',
                              'sourcePath'         => '\\\\qvarland3\\MNOLIB\\QS36PRC.FILE\\',
                              'repoPath'           => 'MN.OLIB\\QS36PRC\\',
